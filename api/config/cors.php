@@ -1,8 +1,19 @@
 <?php
 // CORS Headers
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-$allowed_origins = ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002'];
-if (in_array($origin, $allowed_origins)) {
+$allowed_origins = [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'http://localhost:3002',
+    // Add your Vercel domains here after deployment
+    // 'https://your-app.vercel.app',
+    // 'https://your-custom-domain.com',
+];
+
+// Also allow any *.vercel.app subdomain for preview deployments
+$is_vercel = preg_match('/^https:\/\/.*\.vercel\.app$/', $origin);
+
+if (in_array($origin, $allowed_origins) || $is_vercel) {
     header("Access-Control-Allow-Origin: " . $origin);
 } else {
     header("Access-Control-Allow-Origin: http://localhost:3001");
