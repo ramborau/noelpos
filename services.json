@@ -1,0 +1,1514 @@
+{
+	"Men": {
+		"CORPORATE WEAR": [
+			{
+				"type": "Service",
+				"item_name": "Business Suit (2-Piece)",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Suit + 2 Shirts",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Executive Blazer",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Blazer + Dress Pants",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Dress Shirt (Formal)",
+				"price": 0.35,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Shirts Package",
+				"price": 1.1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Dress Shirt",
+				"price": 0.25,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Shirts Package",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Dress Pants",
+				"price": 0.35,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Shirt + Pants Combo",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Dress Pants",
+				"price": 0.25,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Shirt + Pants Combo",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Tie",
+				"price": 0.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Ties Package",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Waistcoat",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Suit + Waistcoat (3 Pcs)",
+				"price": 1.5,
+				"currency": "BHD"
+			}
+		],
+		"ARABIC TRADITIONAL": [
+			{
+				"type": "Service",
+				"item_name": "Thobe (Regular)",
+				"price": 0.6,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Thobes Package",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Thobe (Regular)",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Thobes Package",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Thobe (Premium)",
+				"price": 0.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Thobe + Keffiyeh",
+				"price": 0.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Kandura",
+				"price": 0.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Kandura + Bisht",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Bisht",
+				"price": 3.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Complete Set",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Keffiyeh",
+				"price": 0.4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Keffiyeh",
+				"price": 0.6,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Shemagh",
+				"price": 0.4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Shemagh + Agal",
+				"price": 0.5,
+				"currency": "BHD"
+			}
+		],
+		"INDIAN TRADITIONAL": [
+			{
+				"type": "Service",
+				"item_name": "Kurta (Simple)",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Kurtas Package",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Kurta (Simple)",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Kurtas Package",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Kurta (Embroidered)",
+				"price": 0.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Kurta + Pajama Set",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Sherwani",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Complete Wedding Set",
+				"price": 5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Pajama",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Kurta + Pajama",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Dhoti",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Dhoti + Kurta",
+				"price": 0.8,
+				"currency": "BHD"
+			}
+		],
+		"PARTY & EVENING WEAR": [
+			{
+				"type": "Service",
+				"item_name": "Tuxedo",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Tuxedo Package",
+				"price": 2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Evening Suit",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Complete Evening Set",
+				"price": 2,
+				"currency": "BHD"
+			}
+		],
+		"CASUAL WEAR": [
+			{
+				"type": "Service",
+				"item_name": "T-Shirt",
+				"price": 0.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 T-Shirts Package",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Polo Shirt",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Polo Shirts",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Jeans",
+				"price": 0.35,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Jeans Package",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Casual Pants",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Pants Package",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Shorts",
+				"price": 0.25,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "4 Shorts Package",
+				"price": 0.8,
+				"currency": "BHD"
+			}
+		],
+		"INNER CLOTHING": [
+			{
+				"type": "Service",
+				"item_name": "Underwear",
+				"price": 0.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Underwear Package",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Vest",
+				"price": 0.25,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Vests Package",
+				"price": 1,
+				"currency": "BHD"
+			}
+		],
+		"WINTER ITEMS": [
+			{
+				"type": "Service",
+				"item_name": "Winter Coat",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Coat + Scarf + Gloves",
+				"price": 2.5,
+				"currency": "BHD"
+			}
+		]
+	},
+	"Women": {
+		"CORPORATE WEAR": [
+			{
+				"type": "Service",
+				"item_name": "Business Suit (2-Piece)",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Suit + Blouse (3 pcs)",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Executive Blazer",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Blazer + Skirt/Pants",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Office Dress",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Dresses Package",
+				"price": 3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Dress Pants",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Blouse + Pants Combo",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Office Blouse",
+				"price": 0.35,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Blouses Package",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Office Blouse",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Blouses Package",
+				"price": 1.2,
+				"currency": "BHD"
+			}
+		],
+		"ARABIC TRADITIONAL": [
+			{
+				"type": "Service",
+				"item_name": "Abaya (Plain)",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Abaya + Hijab Set",
+				"price": 1.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Abaya (Plain)",
+				"price": 0.9,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Abaya + Hijab Set",
+				"price": 1.1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Abaya (Embroidered)",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Premium Abaya Set",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Abaya (Designer)",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Designer Combo",
+				"price": 2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Hijab (Plain)",
+				"price": 0.4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Hijabs Package",
+				"price": 3.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Hijab (Plain)",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Hijabs Package",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Hijab (Embroidered)",
+				"price": 0.6,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Embroidered Hijabs",
+				"price": 4.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Shemagh Scarf",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Scarf Collection",
+				"price": 5.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Kaftan",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Kaftan + Accessories",
+				"price": 1.2,
+				"currency": "BHD"
+			}
+		],
+		"INDIAN TRADITIONAL": [
+			{
+				"type": "Service",
+				"item_name": "Sari (Simple)",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Saris Package",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Sari (Heavy Embroidered)",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Sari + Blouse",
+				"price": 1.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Lehenga",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Lehenga + Blouse + Dupatta",
+				"price": 2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Choli/Blouse",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Blouses Package",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Salwar Kameez (Simple)",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Sets Package",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Salwar Kameez (Designer)",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Designer Set",
+				"price": 2.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Dupatta (Plain)",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Dupattas",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Dupatta (Embroidered)",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Embroidered Dupattas",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Salwar Kameez (Simple)",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Sets Package",
+				"price": 0.8,
+				"currency": "BHD"
+			}
+		],
+		"PARTY & EVENING WEAR": [
+			{
+				"type": "Service",
+				"item_name": "Evening Gown",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Gown + Wrap",
+				"price": 2.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Party Dress",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Party Dresses",
+				"price": 2.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Cocktail Dress",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Dress + Accessories",
+				"price": 2.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Designer Gown",
+				"price": 2.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Premium Package",
+				"price": 4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Sequence Dress",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Special Care Package",
+				"price": 2.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Party Dress (Simple)",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Dresses Package",
+				"price": 1.5,
+				"currency": "BHD"
+			}
+		],
+		"CASUAL WEAR": [
+			{
+				"type": "Service",
+				"item_name": "T-Shirt",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 T-Shirts Package",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Casual Top",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Tops Package",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Jeans",
+				"price": 0.4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Jeans Package",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Skirt",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Skirts Package",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Leggings",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Leggings Package",
+				"price": 1.2,
+				"currency": "BHD"
+			}
+		],
+		"INNER CLOTHING": [
+			{
+				"type": "Service",
+				"item_name": "Underwear",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Underwear Package",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Bra",
+				"price": 0.4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "6 Bras Package",
+				"price": 2,
+				"currency": "BHD"
+			}
+		],
+		"WINTER ITEMS": [
+			{
+				"type": "Service",
+				"item_name": "Winter Coat",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Coat + Scarf + Gloves",
+				"price": 2.5,
+				"currency": "BHD"
+			}
+		]
+	},
+	"Children": {
+		"CHILDREN'S WEAR": [
+			{
+				"type": "Service",
+				"item_name": "School Shirt",
+				"price": 0.25,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Shirts Package",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "School Pants/Skirt",
+				"price": 0.25,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Pants/Skirts",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "School Cap",
+				"price": 0.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Caps Package",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Costume",
+				"price": 2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Costume + Accessories",
+				"price": 2.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Party Dress",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Party Outfits",
+				"price": 2.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Casual Outfit",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Outfits Package",
+				"price": 1,
+				"currency": "BHD"
+			}
+		],
+		"SPECIAL SERVICES": [
+			{
+				"type": "Service",
+				"item_name": "School Shoes",
+				"price": 2.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "4 Pairs Package",
+				"price": 9,
+				"currency": "BHD"
+			}
+		]
+	},
+	"Boys": {
+		"CHILDREN'S WEAR": [
+			{
+				"type": "Service",
+				"item_name": "School Uniform Set",
+				"price": 0.6,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Weekly Uniform Package",
+				"price": 2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "School Uniform Set",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Weekly Uniform Package",
+				"price": 2,
+				"currency": "BHD"
+			}
+		]
+	},
+	"Girls": {
+		"CHILDREN'S WEAR": [
+			{
+				"type": "Service",
+				"item_name": "School Uniform Set",
+				"price": 0.6,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Weekly Uniform Package",
+				"price": 2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "School Uniform Set",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Weekly Uniform Package",
+				"price": 2,
+				"currency": "BHD"
+			}
+		]
+	},
+	"All": {
+		"INNER CLOTHING": [
+			{
+				"type": "Service",
+				"item_name": "Socks",
+				"price": 0.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "20 Socks Package",
+				"price": 3.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Innerwear Complete Set (2pcs)",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "20 Items Mixed",
+				"price": 2.5,
+				"currency": "BHD"
+			}
+		],
+		"WINTER ITEMS": [
+			{
+				"type": "Service",
+				"item_name": "Wool Sweater",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Sweaters Package",
+				"price": 2.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Fleece Jacket",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Jackets Package",
+				"price": 2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Scarf (Wool)",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Wool Scarves",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Gloves",
+				"price": 0.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Pairs Gloves",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Thermal Wear Set",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Sets Package",
+				"price": 2.5,
+				"currency": "BHD"
+			}
+		],
+		"SPECIAL SERVICES": [
+			{
+				"type": "Service",
+				"item_name": "Leather Shoes",
+				"price": 3.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Pairs Package",
+				"price": 8.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Sneakers",
+				"price": 4.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Pairs Package",
+				"price": 7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Baseball Cap",
+				"price": 0.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Caps Package",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Prayer Cap",
+				"price": 0.4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "5 Caps Package",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Wedding Dress",
+				"price": 7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Complete Care",
+				"price": 12,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Designer Gown",
+				"price": 8.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Special Handling",
+				"price": 15,
+				"currency": "BHD"
+			}
+		]
+	},
+	"Home Linen": {
+		"HOME LINEN - DRY CLEAN": [
+			{
+				"type": "Service",
+				"item_name": "King Size Duvet Cover",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Bedding Set (King)",
+				"price": 2.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Queen Size Duvet Cover",
+				"price": 1.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Bedding Set (Queen)",
+				"price": 2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Double Bed Sheet",
+				"price": 0.4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Sheet Set (Double)",
+				"price": 0.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Single Bed Sheet",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Sheet Set (Single)",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Pillow Cover",
+				"price": 0.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "4 Pillow Covers",
+				"price": 0.6,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Curtains (per panel)",
+				"price": 2.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "4 Curtain Panels",
+				"price": 8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Tablecloth (Large)",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Tablecloths",
+				"price": 2.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Blanket/Comforter",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Blankets",
+				"price": 2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Cushion Cover",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "6 Cushion Covers",
+				"price": 3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Bedspread",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Bedspread + Pillows",
+				"price": 1.2,
+				"currency": "BHD"
+			}
+		],
+		"HOME LINEN - WASH & IRON": [
+			{
+				"type": "Service",
+				"item_name": "King Size Duvet Cover",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Bedding Set (King)",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Queen Size Duvet Cover",
+				"price": 0.9,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Bedding Set (Queen)",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Double Bed Sheet",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Sheet Set (Double)",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Single Bed Sheet",
+				"price": 0.25,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Sheet Set (Single)",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Pillow Cover",
+				"price": 0.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "4 Pillow Covers",
+				"price": 0.6,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Curtains (per panel)",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "4 Curtain Panels",
+				"price": 2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Tablecloth (Large)",
+				"price": 0.4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Tablecloths",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Blanket/Comforter",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "2 Blankets",
+				"price": 1.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Cushion Cover",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "6 Cushion Covers",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Bedspread",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "Bedspread + Pillows",
+				"price": 0.7,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Bath Towel (Large)",
+				"price": 0.3,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "6 Towels Set",
+				"price": 1.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Hand Towel",
+				"price": 0.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "8 Hand Towels",
+				"price": 1.4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Face Towel",
+				"price": 0.1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "10 Face Towels",
+				"price": 0.9,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Bath Mat",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "3 Bath Mats",
+				"price": 1,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Kitchen Towel",
+				"price": 0.5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "12 Kitchen Towels",
+				"price": 5,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Apron",
+				"price": 0.4,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "4 Aprons",
+				"price": 1.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Table Runner",
+				"price": 0.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "4 Table Runners",
+				"price": 2.8,
+				"currency": "BHD"
+			},
+			{
+				"type": "Service",
+				"item_name": "Napkin",
+				"price": 0.2,
+				"currency": "BHD"
+			},
+			{
+				"type": "Offer",
+				"item_name": "12 Napkins",
+				"price": 2.2,
+				"currency": "BHD"
+			}
+		]
+	}
+}

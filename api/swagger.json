@@ -1,0 +1,1257 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Admin Panel API",
+    "description": "API for Order Management Admin Panel - accepts orders, manages riders, customers, and handles order assignments",
+    "version": "2.0.0",
+    "contact": {
+      "name": "API Support"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8888/simple-php-admin-noel/api",
+      "description": "MAMP development server"
+    },
+    {
+      "url": "http://localhost:8000",
+      "description": "PHP built-in server"
+    }
+  ],
+  "paths": {
+    "/auth/login.php": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Admin Login",
+        "description": "Authenticate admin user and receive access token",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              },
+              "example": {
+                "username": "admin",
+                "password": "password"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid credentials",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders/create.php": {
+      "post": {
+        "tags": ["Orders"],
+        "summary": "Create New Order",
+        "description": "Create a new order with customer and address details. Automatically creates or reuses customer by mobile number.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequest"
+              },
+              "example": {
+                "pickupDate": "2025-11-21",
+                "pickupTimeSlot": "2:00 PM - 4:00 PM",
+                "customer": {
+                  "name": "Rg",
+                  "mobile": "+97394229422"
+                },
+                "address": {
+                  "formattedAddress": "4GMQ+C4X, Riffa, Bahrain",
+                  "locationType": "home",
+                  "block": "333",
+                  "city": "Riffa",
+                  "governorate": "Central Governorate",
+                  "roadNo": "333",
+                  "flatHouseNo": "333",
+                  "floorNo": "333",
+                  "placeId": "ChIJW7_MPyGtST4R_iYxl06R7ys",
+                  "latitude": 26.1336012,
+                  "longitude": 50.5378681
+                },
+                "items": [
+                  {
+                    "id": "Boys-CHILDREN'S WEAR-School Uniform Set-Service-0.6",
+                    "name": "School Uniform Set",
+                    "type": "Service",
+                    "price": 0.6,
+                    "quantity": 1
+                  }
+                ],
+                "total": 0.6,
+                "subtotal": 0.6,
+                "paymentMethod": "cash",
+                "timestamp": "2025-11-21T10:00:26.345Z"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Order created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOrderResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing required fields",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders/list.php": {
+      "get": {
+        "tags": ["Orders"],
+        "summary": "Get All Orders",
+        "description": "Retrieve all orders with customer, address, and rider information",
+        "responses": {
+          "200": {
+            "description": "List of orders",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders/get.php": {
+      "get": {
+        "tags": ["Orders"],
+        "summary": "Get Single Order",
+        "description": "Retrieve a specific order by ID with full customer and address details",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Order ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Order details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SingleOrderResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Order not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders/assign-rider.php": {
+      "post": {
+        "tags": ["Orders"],
+        "summary": "Assign Rider to Order",
+        "description": "Assign a rider to deliver an order",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignRiderRequest"
+              },
+              "example": {
+                "order_id": 1,
+                "rider_id": 2
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Rider assigned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Rider not found or inactive",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders/update-status.php": {
+      "post": {
+        "tags": ["Orders"],
+        "summary": "Update Order Status",
+        "description": "Update the status of an order",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateStatusRequest"
+              },
+              "example": {
+                "order_id": 1,
+                "status": "delivered"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Status updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customers/list.php": {
+      "get": {
+        "tags": ["Customers"],
+        "summary": "Get All Customers",
+        "description": "Retrieve all customers with address and order counts",
+        "responses": {
+          "200": {
+            "description": "List of customers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customers/get.php": {
+      "get": {
+        "tags": ["Customers"],
+        "summary": "Get Single Customer",
+        "description": "Retrieve a customer with their addresses and orders",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Customer ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Customer details with addresses and orders",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SingleCustomerResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Customer not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customers/create.php": {
+      "post": {
+        "tags": ["Customers"],
+        "summary": "Create New Customer",
+        "description": "Create a new customer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCustomerRequest"
+              },
+              "example": {
+                "name": "John Doe",
+                "mobile": "+97312345678"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Customer created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCustomerResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing required fields",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Customer with this mobile already exists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/addresses/list.php": {
+      "get": {
+        "tags": ["Addresses"],
+        "summary": "Get Customer Addresses",
+        "description": "Retrieve all addresses for a specific customer",
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Customer ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of addresses",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddressListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/addresses/create.php": {
+      "post": {
+        "tags": ["Addresses"],
+        "summary": "Create New Address",
+        "description": "Add a new address for a customer",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAddressRequest"
+              },
+              "example": {
+                "customer_id": 1,
+                "formatted_address": "4GMQ+C4X, Riffa, Bahrain",
+                "location_type": "home",
+                "block": "333",
+                "city": "Riffa",
+                "governorate": "Central Governorate",
+                "road_no": "333",
+                "flat_house_no": "333",
+                "floor_no": "333",
+                "place_id": "ChIJW7_MPyGtST4R_iYxl06R7ys",
+                "latitude": 26.1336012,
+                "longitude": 50.5378681,
+                "is_default": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Address created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateAddressResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing required fields",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Customer not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/riders/list.php": {
+      "get": {
+        "tags": ["Riders"],
+        "summary": "Get All Riders",
+        "description": "Retrieve all riders",
+        "responses": {
+          "200": {
+            "description": "List of riders",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RiderListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/riders/create.php": {
+      "post": {
+        "tags": ["Riders"],
+        "summary": "Add New Rider",
+        "description": "Add a new rider to the system",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRiderRequest"
+              },
+              "example": {
+                "name": "John Smith",
+                "mobile": "+1234567890"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Rider added successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateRiderResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing required fields",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/riders/delete.php": {
+      "post": {
+        "tags": ["Riders"],
+        "summary": "Deactivate Rider",
+        "description": "Deactivate a rider (soft delete)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteRiderRequest"
+              },
+              "example": {
+                "id": 1
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Rider deactivated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LoginRequest": {
+        "type": "object",
+        "required": ["username", "password"],
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "Admin username"
+          },
+          "password": {
+            "type": "string",
+            "description": "Admin password"
+          }
+        }
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "token": {
+            "type": "string"
+          },
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "username": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "CreateOrderRequest": {
+        "type": "object",
+        "required": ["customer", "items", "total"],
+        "properties": {
+          "pickupDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Pickup date (YYYY-MM-DD)"
+          },
+          "pickupTimeSlot": {
+            "type": "string",
+            "description": "Pickup time slot (e.g., '2:00 PM - 4:00 PM')"
+          },
+          "customer": {
+            "$ref": "#/components/schemas/CustomerInput"
+          },
+          "address": {
+            "$ref": "#/components/schemas/AddressInput"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            },
+            "description": "List of items in the order"
+          },
+          "total": {
+            "type": "number",
+            "format": "float",
+            "description": "Total order amount"
+          },
+          "subtotal": {
+            "type": "number",
+            "format": "float",
+            "description": "Subtotal before any adjustments"
+          },
+          "paymentMethod": {
+            "type": "string",
+            "enum": ["cash", "card", "online"],
+            "description": "Payment method"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Order timestamp"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Special instructions or notes"
+          }
+        }
+      },
+      "CustomerInput": {
+        "type": "object",
+        "required": ["name", "mobile"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Customer's full name"
+          },
+          "mobile": {
+            "type": "string",
+            "description": "Customer's mobile number"
+          }
+        }
+      },
+      "AddressInput": {
+        "type": "object",
+        "properties": {
+          "formattedAddress": {
+            "type": "string",
+            "description": "Full formatted address"
+          },
+          "locationType": {
+            "type": "string",
+            "enum": ["home", "office", "other"],
+            "description": "Type of location"
+          },
+          "block": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "governorate": {
+            "type": "string"
+          },
+          "roadNo": {
+            "type": "string"
+          },
+          "flatHouseNo": {
+            "type": "string"
+          },
+          "floorNo": {
+            "type": "string"
+          },
+          "placeId": {
+            "type": "string",
+            "description": "Google Places ID"
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "OrderItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Item ID"
+          },
+          "name": {
+            "type": "string",
+            "description": "Item name"
+          },
+          "type": {
+            "type": "string",
+            "description": "Item type (Service/Offer)"
+          },
+          "price": {
+            "type": "number",
+            "format": "float",
+            "description": "Unit price"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Quantity"
+          }
+        }
+      },
+      "CreateOrderResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "order_id": {
+            "type": "integer"
+          },
+          "order_number": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "integer"
+          },
+          "address_id": {
+            "type": "integer"
+          }
+        }
+      },
+      "Order": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "order_number": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "integer"
+          },
+          "address_id": {
+            "type": "integer"
+          },
+          "customer_name": {
+            "type": "string"
+          },
+          "customer_phone": {
+            "type": "string"
+          },
+          "customer_address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "governorate": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderItem"
+            }
+          },
+          "subtotal": {
+            "type": "number",
+            "format": "float"
+          },
+          "total_amount": {
+            "type": "number",
+            "format": "float"
+          },
+          "payment_method": {
+            "type": "string",
+            "enum": ["cash", "card", "online"]
+          },
+          "pickup_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "pickup_time_slot": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "assigned", "picked_up", "delivered", "cancelled"]
+          },
+          "rider_id": {
+            "type": "integer",
+            "nullable": true
+          },
+          "rider_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "rider_mobile": {
+            "type": "string",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string"
+          },
+          "order_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "OrderListResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order"
+            }
+          }
+        }
+      },
+      "SingleOrderResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Order"
+          }
+        }
+      },
+      "AssignRiderRequest": {
+        "type": "object",
+        "required": ["order_id", "rider_id"],
+        "properties": {
+          "order_id": {
+            "type": "integer"
+          },
+          "rider_id": {
+            "type": "integer"
+          }
+        }
+      },
+      "UpdateStatusRequest": {
+        "type": "object",
+        "required": ["order_id", "status"],
+        "properties": {
+          "order_id": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "assigned", "picked_up", "delivered", "cancelled"]
+          }
+        }
+      },
+      "Customer": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "address_count": {
+            "type": "integer"
+          },
+          "order_count": {
+            "type": "integer"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "CustomerListResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "customers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Customer"
+            }
+          }
+        }
+      },
+      "SingleCustomerResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "customer": {
+            "$ref": "#/components/schemas/Customer"
+          },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Address"
+            }
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order"
+            }
+          }
+        }
+      },
+      "CreateCustomerRequest": {
+        "type": "object",
+        "required": ["name", "mobile"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Customer's full name"
+          },
+          "mobile": {
+            "type": "string",
+            "description": "Customer's mobile number (must be unique)"
+          }
+        }
+      },
+      "CreateCustomerResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "integer"
+          }
+        }
+      },
+      "Address": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "customer_id": {
+            "type": "integer"
+          },
+          "formatted_address": {
+            "type": "string"
+          },
+          "location_type": {
+            "type": "string",
+            "enum": ["home", "office", "other"]
+          },
+          "block": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "governorate": {
+            "type": "string"
+          },
+          "road_no": {
+            "type": "string"
+          },
+          "flat_house_no": {
+            "type": "string"
+          },
+          "floor_no": {
+            "type": "string"
+          },
+          "place_id": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "is_default": {
+            "type": "boolean"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "AddressListResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Address"
+            }
+          }
+        }
+      },
+      "CreateAddressRequest": {
+        "type": "object",
+        "required": ["customer_id"],
+        "properties": {
+          "customer_id": {
+            "type": "integer",
+            "description": "Customer ID"
+          },
+          "formatted_address": {
+            "type": "string"
+          },
+          "location_type": {
+            "type": "string",
+            "enum": ["home", "office", "other"]
+          },
+          "block": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "governorate": {
+            "type": "string"
+          },
+          "road_no": {
+            "type": "string"
+          },
+          "flat_house_no": {
+            "type": "string"
+          },
+          "floor_no": {
+            "type": "string"
+          },
+          "place_id": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "is_default": {
+            "type": "boolean"
+          }
+        }
+      },
+      "CreateAddressResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "address_id": {
+            "type": "integer"
+          }
+        }
+      },
+      "Rider": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "inactive"]
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "RiderListResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Rider"
+            }
+          }
+        }
+      },
+      "CreateRiderRequest": {
+        "type": "object",
+        "required": ["name", "mobile"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Rider's full name"
+          },
+          "mobile": {
+            "type": "string",
+            "description": "Rider's mobile number"
+          }
+        }
+      },
+      "CreateRiderResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "rider_id": {
+            "type": "integer"
+          }
+        }
+      },
+      "DeleteRiderRequest": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": {
+            "type": "integer"
+          }
+        }
+      },
+      "SuccessResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

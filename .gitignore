@@ -1,0 +1,34 @@
+# Dependencies
+frontend/node_modules/
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+frontend/.env.local
+
+# Build outputs
+frontend/.next/
+frontend/out/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Install marker
+install/.installed
+
+# Cache
+.cache/
+Archive.zip
