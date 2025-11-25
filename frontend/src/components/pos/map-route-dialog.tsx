@@ -21,7 +21,7 @@ interface MapRouteDialogProps {
 }
 
 // Custom map styles - clean theme with no POIs
-const MAP_STYLES: google.maps.MapTypeStyle[] = [
+const MAP_STYLES: any[] = [
   {
     featureType: 'all',
     elementType: 'labels.text',
