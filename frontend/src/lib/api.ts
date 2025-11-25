@@ -51,6 +51,60 @@ export const api = {
       method: 'POST',
       body: JSON.stringify({ id }),
     }),
+
+  // Service Requests
+  getServiceRequests: () => fetchAPI('/service-requests/list.php'),
+  getServiceRequest: (id: number) => fetchAPI(`/service-requests/get.php?id=${id}`),
+  createServiceRequest: (data: ServiceRequestInput) =>
+    fetchAPI('/service-requests/create.php', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    }),
+  updateServiceRequest: (id: number, data: Partial<ServiceRequestInput>) =>
+    fetchAPI('/service-requests/update.php', {
+      method: 'POST',
+      body: JSON.stringify({ id, ...data }),
+    }),
+  deleteServiceRequest: (id: number) =>
+    fetchAPI('/service-requests/delete.php', {
+      method: 'POST',
+      body: JSON.stringify({ id }),
+    }),
+  assignRiderToServiceRequest: (serviceRequestId: number, riderId: number) =>
+    fetchAPI('/service-requests/assign-rider.php', {
+      method: 'POST',
+      body: JSON.stringify({ service_request_id: serviceRequestId, rider_id: riderId }),
+    }),
+
+  // Customers
+  getCustomers: () => fetchAPI('/customers/list.php'),
+  createCustomer: (data: CustomerInput) =>
+    fetchAPI('/customers/create.php', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    }),
+  updateCustomer: (id: number, data: Partial<CustomerInput>) =>
+    fetchAPI('/customers/update.php', {
+      method: 'POST',
+      body: JSON.stringify({ id, ...data }),
+    }),
+
+  // Services
+  getServices: () => fetchAPI('/services/list.php'),
+
+  // Categories
+  getCategories: () => fetchAPI('/categories/list.php'),
+
+  // Subcategories
+  getSubcategories: () => fetchAPI('/subcategories/list.php'),
+
+  // Settings
+  getSettings: () => fetchAPI('/settings/get.php'),
+  updateSettings: (data: Record<string, string>) =>
+    fetchAPI('/settings/update.php', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    }),
 };
 
 export interface OrderItem {
@@ -94,4 +148,21 @@ export interface Rider {
   mobile: string;
   status: string;
   created_at: string;
+}
+
+export interface ServiceRequestInput {
+  customer_id?: number;
+  customer_name?: string;
+  customer_phone?: string;
+  address_id?: number;
+  pickup_date?: string;
+  pickup_time?: string;
+  notes?: string;
+  status?: string;
+}
+
+export interface CustomerInput {
+  name: string;
+  phone: string;
+  email?: string;
 }
