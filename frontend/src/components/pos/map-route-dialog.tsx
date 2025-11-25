@@ -245,7 +245,7 @@ export function MapRouteDialog({
 
         // Add all route points to bounds
         if (route.overview_path) {
-          route.overview_path.forEach((point) => {
+          route.overview_path.forEach((point: any) => {
             bounds.extend(point);
           });
         }
